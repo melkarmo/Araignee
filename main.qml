@@ -243,7 +243,7 @@ Window {
     Rectangle {
         id: zoneJoueur1
         x: 64
-        y: 651
+        y: 645
         width: 230
         height: 35
         color: "#ffff09"
@@ -266,7 +266,7 @@ Window {
     Rectangle {
         id: zoneJoueur2
         x: 308
-        y: 651
+        y: 645
         width: 230
         height: 35
         color: "#04f2ff"
@@ -309,6 +309,14 @@ Window {
             horizontalAlignment: Text.AlignHCenter
             font.pixelSize: 20
         }
+
+        MouseArea {
+            id: mouseAreaNP
+            x: 0
+            y: 0
+            width: 230
+            height: 65
+        }
     }
 
     Rectangle {
@@ -332,6 +340,14 @@ Window {
             verticalAlignment: Text.AlignVCenter
             font.family: "MS Shell Dlg 2"
             fontSizeMode: Text.FixedSize
+        }
+
+        MouseArea {
+            id: mouseAreaR
+            x: 0
+            y: 0
+            width: 230
+            height: 65
         }
     }
 
