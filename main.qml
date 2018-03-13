@@ -5,7 +5,7 @@ Window {
     id: window
     visible: true
     width: 600
-    height: 600
+    height: 820
     title: qsTr("Jeu de l'araignée")
 
     Rectangle {
@@ -224,6 +224,73 @@ Window {
             y: 0
             width: 75
             height: 75
+        }
+    }
+
+    Text {
+        id: textInfos
+        x: 64
+        y: 579
+        width: 474
+        height: 52
+        text: qsTr("Text")
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: 20
+    }
+
+    TextEdit {
+        id: textLegende
+        x: 64
+        y: 649
+        width: 474
+        height: 35
+        text: qsTr("Text Edit")
+        font.pixelSize: 12
+    }
+
+    Rectangle {
+        id: zoneNouvPartie
+        x: 64
+        y: 706
+        width: 230
+        height: 65
+        color: "#ffffff"
+
+        Text {
+            id: textNouvPartie
+            x: 0
+            y: 0
+            width: 230
+            height: 65
+            text: qsTr("Text")
+            fontSizeMode: Text.FixedSize
+            font.family: "Arial"
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 12
+        }
+    }
+
+    Rectangle {
+        id: zoneRegles
+        x: 308
+        y: 706
+        width: 230
+        height: 65
+        color: "#ffffff"
+        Text {
+            id: textRegles
+            x: 0
+            y: 0
+            width: 230
+            height: 65
+            text: qsTr("Text")
+            font.pixelSize: 12
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.family: "Arial"
+            fontSizeMode: Text.FixedSize
         }
     }
 
