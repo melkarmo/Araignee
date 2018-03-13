@@ -233,20 +233,57 @@ Window {
         y: 579
         width: 474
         height: 52
-        text: qsTr("Text")
+        text: qsTr("Joueur 1, à vous de jouer !")
+        font.bold: true
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 20
     }
 
-    TextEdit {
-        id: textLegende
+    Rectangle {
+        id: zoneJoueur1
         x: 64
-        y: 649
-        width: 474
+        y: 651
+        width: 230
         height: 35
-        text: qsTr("Text Edit")
-        font.pixelSize: 12
+        color: "#ffff09"
+
+        Text {
+            id: text1
+            x: 0
+            y: 0
+            width: 230
+            height: 35
+            text: qsTr("Joueur 1")
+            font.bold: true
+            styleColor: "#000000"
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 16
+        }
+    }
+
+    Rectangle {
+        id: zoneJoueur2
+        x: 308
+        y: 651
+        width: 230
+        height: 35
+        color: "#04f2ff"
+
+        Text {
+            id: text2
+            x: 0
+            y: 0
+            width: 230
+            height: 35
+            text: qsTr("Joueur 2")
+            font.bold: true
+            font.italic: false
+            font.pixelSize: 16
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+        }
     }
 
     Rectangle {
@@ -256,6 +293,7 @@ Window {
         width: 230
         height: 65
         color: "#ffffff"
+        border.width: 3
 
         Text {
             id: textNouvPartie
@@ -263,12 +301,13 @@ Window {
             y: 0
             width: 230
             height: 65
-            text: qsTr("Text")
+            text: qsTr("Nouvelle Partie")
+            font.bold: true
             fontSizeMode: Text.FixedSize
-            font.family: "Arial"
+            font.family: "MS Shell Dlg 2"
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: 12
+            font.pixelSize: 20
         }
     }
 
@@ -279,19 +318,24 @@ Window {
         width: 230
         height: 65
         color: "#ffffff"
+        border.width: 3
         Text {
             id: textRegles
             x: 0
             y: 0
             width: 230
             height: 65
-            text: qsTr("Text")
-            font.pixelSize: 12
+            text: qsTr("Règles")
+            font.bold: true
+            font.pixelSize: 20
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            font.family: "Arial"
+            font.family: "MS Shell Dlg 2"
             fontSizeMode: Text.FixedSize
         }
     }
+
+
+
 
 }
