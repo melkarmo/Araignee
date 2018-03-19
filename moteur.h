@@ -7,6 +7,7 @@ class Moteur
 public:
     Moteur();
 private:
+    int nombre ;
 
 
 };
