@@ -5,7 +5,10 @@
 class Case
 {
 public:
-    Case();
+    Case(int i);
+    ~Case();
+private:
+    int numero;
 };
 
 #endif // CASE_H
