@@ -3,13 +3,13 @@
 
 #include <case.h>
 
-class Moteur
-{
+class Moteur {
+
 public:
     Moteur();
     ~Moteur();
 private:
-    int compteur;
+    int compteur = 0;
     bool joueur1 [9];
     bool joueur2 [9];
     bool table [9];

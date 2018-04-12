@@ -78,6 +78,7 @@ Window {
             y: 0
             width: 75
             height: 75
+            //onClicked:
         }
     }
 
