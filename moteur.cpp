@@ -1,6 +1,6 @@
-#include "moteur.h"
+//#include "moteur.h"
 
-Moteur::Moteur()
-{
+//Moteur::Moteur()
+//{
 
-}
+//}
