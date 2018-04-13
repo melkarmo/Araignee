@@ -7,6 +7,29 @@ Rectangle {
     height: 820
     color: "#ffffff"
     radius: 0
+    property alias zoneNouvPartie: zoneNouvPartie
+    property alias zoneRegles: zoneRegles
+    property alias mouseAreaR: mouseAreaR
+    property alias mouseAreaNP: mouseAreaNP
+    property alias textInfos: textInfos
+    property alias mouseArea9: mouseArea9
+    property alias case9: case9
+    property alias mouseArea8: mouseArea8
+    property alias case8: case8
+    property alias mouseArea7: mouseArea7
+    property alias case7: case7
+    property alias mouseArea6: mouseArea6
+    property alias case6: case6
+    property alias mouseArea5: mouseArea5
+    property alias case5: case5
+    property alias mouseArea4: mouseArea4
+    property alias case4: case4
+    property alias mouseArea3: mouseArea3
+    property alias case3: case3
+    property alias mouseArea2: mouseArea2
+    property alias case2: case2
+    property alias mouseArea1: mouseArea1
+    property alias case1: case1
     border.width: 0
     border.color: "#000000"
 
