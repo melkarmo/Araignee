@@ -13,6 +13,8 @@ Window {
 
         mouseAreaNP {
             onClicked : vueObjetMoteur.nouvellePartie();
+            onEntered : zoneNouvPartie.color = "#ebebeb";
+            onExited : zoneNouvPartie.color = "#ffffff";
         }
 
         mouseArea0 {

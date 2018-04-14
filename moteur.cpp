@@ -2,9 +2,9 @@
 
 Moteur::Moteur(QObject *parent) : QObject(parent)
 {
-    initialisation();
     for(int i = 0; i < 9; i++)
         cases[i] = new Case(i);
+    initialisation();
     changeInfos();
     changeBords();
     changeCouleurs();
@@ -54,10 +54,27 @@ void Moteur::clique(int i){
     }
 
     if (gagne(joueur)){
-        if (joueur == 1)
+        if (joueur == 1){
             infos = "Bravo Joueur 1 ! Vous avez gagné !";
-        else
+            for(int j = 0; j<9; j++){
+                if(joueur1[j]) {
+                    bords[j] = "#00ff00";
+                } else if (joueur2[j]){
+                } else {
+                    couleurs[j] = "#ebebeb";
+                }
+            }
+        } else {
             infos = "Bravo Joueur 2 ! Vous avez gagné !";
+            for(int j = 0; j<9; j++){
+                if(joueur2[j]){
+                    bords[j] = "#00ff00";
+                } else if (joueur1[j]){
+                } else {
+                    couleurs[j] = "#ebebeb";
+                }
+            }
+        }
         etatCases = false;
         changeEtatCases();
     }
@@ -118,10 +135,9 @@ void Moteur::deplace(int i){
             infos = "Joueur 1, à vous de jouer!";
         }
         couleurs[caseSelected] = "#ffffff";
-        bords[caseSelected] = "#000000";
         tapisVide[i] = false;
         tapisVide[caseSelected] = true;
-        selected = false;
+        deselectionne();
         compteur++;
     }
 }
@@ -131,6 +147,11 @@ void Moteur::selectionne(int i){
         selected = true;
         caseSelected = i;
         bords[caseSelected] = "#fe0000";
+
+        for (int j = 0; j < cases[i]->getTailleDepl(); j++){
+            if(tapisVide[cases[i]->getDeplacements()[j]])
+                couleurs[cases[i]->getDeplacements()[j]] = "#F6CECE";
+        }
     }
 }
 
@@ -138,6 +159,11 @@ void Moteur::selectionne(int i){
 void Moteur::deselectionne(){
     selected = false;
     bords[caseSelected] = "#000000";
+
+    for (int j = 0; j < 9; j++){
+        if(tapisVide[j])
+            couleurs[j] = "#ffffff";
+    }
 }
 
 

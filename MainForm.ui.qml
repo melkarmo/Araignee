@@ -26,8 +26,6 @@ Rectangle {
     property alias mouseArea0: mouseArea0
     property alias case0: case0
     property alias zoneNouvPartie: zoneNouvPartie
-    property alias zoneRegles: zoneRegles
-    property alias mouseAreaR: mouseAreaR
     property alias mouseAreaNP: mouseAreaNP
     property alias textInfos: textInfos
     border.width: 0
@@ -95,7 +93,7 @@ Rectangle {
         width: 75
         height: 75
         color: vueObjetMoteur.couleursQML[0]
-        border.width: 3
+        border.width: 5
         border.color: vueObjetMoteur.bordsQML[0]
 
         MouseArea {
@@ -115,7 +113,7 @@ Rectangle {
         width: 75
         height: 75
         color: vueObjetMoteur.couleursQML[1]
-        border.width: 3
+        border.width: 5
         border.color: vueObjetMoteur.bordsQML[1]
 
         MouseArea {
@@ -135,7 +133,7 @@ Rectangle {
         width: 75
         height: 75
         color: vueObjetMoteur.couleursQML[2]
-        border.width: 3
+        border.width: 5
         border.color: vueObjetMoteur.bordsQML[2]
 
         MouseArea {
@@ -155,7 +153,7 @@ Rectangle {
         width: 75
         height: 75
         color: vueObjetMoteur.couleursQML[3]
-        border.width: 3
+        border.width: 5
         border.color: vueObjetMoteur.bordsQML[3]
 
         MouseArea {
@@ -175,7 +173,7 @@ Rectangle {
         width: 75
         height: 75
         color: vueObjetMoteur.couleursQML[4]
-        border.width: 3
+        border.width: 5
         border.color: vueObjetMoteur.bordsQML[4]
 
         MouseArea {
@@ -195,7 +193,7 @@ Rectangle {
         width: 75
         height: 75
         color: vueObjetMoteur.couleursQML[5]
-        border.width: 3
+        border.width: 5
         border.color: vueObjetMoteur.bordsQML[5]
 
         MouseArea {
@@ -215,7 +213,7 @@ Rectangle {
         width: 75
         height: 75
         color: vueObjetMoteur.couleursQML[6]
-        border.width: 3
+        border.width: 5
         border.color: vueObjetMoteur.bordsQML[6]
 
         MouseArea {
@@ -235,7 +233,7 @@ Rectangle {
         width: 75
         height: 75
         color: vueObjetMoteur.couleursQML[7]
-        border.width: 3
+        border.width: 5
         border.color: vueObjetMoteur.bordsQML[7]
 
         MouseArea {
@@ -255,7 +253,7 @@ Rectangle {
         width: 75
         height: 75
         color: vueObjetMoteur.couleursQML[8]
-        border.width: 3
+        border.width: 5
         border.color: vueObjetMoteur.bordsQML[8]
 
         MouseArea {
@@ -268,22 +266,32 @@ Rectangle {
         }
     }
 
-    Text {
-        id: textInfos
-        x: 64
-        y: 579
+    Rectangle {
+        id: zoneInfos
+        x: 63
+        y: 578
         width: 474
         height: 52
-        text: vueObjetMoteur.infosQML
-        font.bold: true
-        verticalAlignment: Text.AlignVCenter
-        horizontalAlignment: Text.AlignHCenter
-        font.pixelSize: 20
+        color: "#ebebeb"
+
+        Text {
+            id: textInfos
+            x: 0
+            y: 0
+            width: 474
+            height: 52
+            text: vueObjetMoteur.infosQML
+            font.family: "MS Shell Dlg 2"
+            font.bold: true
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 20
+        }
     }
 
     Rectangle {
         id: zoneJoueur1
-        x: 64
+        x: 63
         y: 645
         width: 230
         height: 35
@@ -330,17 +338,19 @@ Rectangle {
     Rectangle {
         id: zoneNouvPartie
         x: 64
-        y: 706
-        width: 230
+        y: 700
+        width: 476
         height: 65
         color: "#ffffff"
+        anchors.horizontalCenterOffset: 0
+        anchors.horizontalCenter: parent.horizontalCenter
         border.width: 3
 
         Text {
             id: textNouvPartie
             x: 0
             y: 0
-            width: 230
+            width: 476
             height: 65
             text: qsTr("Nouvelle Partie")
             font.bold: true
@@ -355,40 +365,9 @@ Rectangle {
             id: mouseAreaNP
             x: 0
             y: 0
-            width: 230
+            width: 476
             height: 65
-        }
-    }
-
-    Rectangle {
-        id: zoneRegles
-        x: 308
-        y: 706
-        width: 230
-        height: 65
-        color: "#ffffff"
-        border.width: 3
-        Text {
-            id: textRegles
-            x: 0
-            y: 0
-            width: 230
-            height: 65
-            text: qsTr("Règles")
-            font.bold: true
-            font.pixelSize: 20
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            font.family: "MS Shell Dlg 2"
-            fontSizeMode: Text.FixedSize
-        }
-
-        MouseArea {
-            id: mouseAreaR
-            x: 0
-            y: 0
-            width: 230
-            height: 65
+            hoverEnabled: true
         }
     }
 }
