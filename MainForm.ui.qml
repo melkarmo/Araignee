@@ -7,13 +7,6 @@ Rectangle {
     height: 820
     color: "#ffffff"
     radius: 0
-    property alias zoneNouvPartie: zoneNouvPartie
-    property alias zoneRegles: zoneRegles
-    property alias mouseAreaR: mouseAreaR
-    property alias mouseAreaNP: mouseAreaNP
-    property alias textInfos: textInfos
-    property alias mouseArea9: mouseArea9
-    property alias case9: case9
     property alias mouseArea8: mouseArea8
     property alias case8: case8
     property alias mouseArea7: mouseArea7
@@ -30,6 +23,13 @@ Rectangle {
     property alias case2: case2
     property alias mouseArea1: mouseArea1
     property alias case1: case1
+    property alias mouseArea0: mouseArea0
+    property alias case0: case0
+    property alias zoneNouvPartie: zoneNouvPartie
+    property alias zoneRegles: zoneRegles
+    property alias mouseAreaR: mouseAreaR
+    property alias mouseAreaNP: mouseAreaNP
+    property alias textInfos: textInfos
     border.width: 0
     border.color: "#000000"
 
@@ -89,13 +89,34 @@ Rectangle {
     }
 
     Rectangle {
-        id: case1
+        id: case0
         x: 62
         y: 65
         width: 75
         height: 75
-        color: "#ffffff"
+        color: vueObjetMoteur.couleursQML[0]
         border.width: 3
+        border.color: vueObjetMoteur.bordsQML[0]
+
+        MouseArea {
+            id: mouseArea0
+            x: 0
+            y: 0
+            width: 75
+            height: 75
+            enabled: vueObjetMoteur.etatCasesQML
+        }
+    }
+
+    Rectangle {
+        id: case1
+        x: 263
+        y: 65
+        width: 75
+        height: 75
+        color: vueObjetMoteur.couleursQML[1]
+        border.width: 3
+        border.color: vueObjetMoteur.bordsQML[1]
 
         MouseArea {
             id: mouseArea1
@@ -103,18 +124,19 @@ Rectangle {
             y: 0
             width: 75
             height: 75
-            //onClicked:
+            enabled: vueObjetMoteur.etatCasesQML
         }
     }
 
     Rectangle {
         id: case2
-        x: 263
+        x: 461
         y: 65
         width: 75
         height: 75
-        color: "#ffffff"
+        color: vueObjetMoteur.couleursQML[2]
         border.width: 3
+        border.color: vueObjetMoteur.bordsQML[2]
 
         MouseArea {
             id: mouseArea2
@@ -122,18 +144,19 @@ Rectangle {
             y: 0
             width: 75
             height: 75
-            hoverEnabled: false
+            enabled: vueObjetMoteur.etatCasesQML
         }
     }
 
     Rectangle {
         id: case3
-        x: 461
-        y: 65
+        x: 62
+        y: 263
         width: 75
         height: 75
-        color: "#ffffff"
+        color: vueObjetMoteur.couleursQML[3]
         border.width: 3
+        border.color: vueObjetMoteur.bordsQML[3]
 
         MouseArea {
             id: mouseArea3
@@ -141,17 +164,19 @@ Rectangle {
             y: 0
             width: 75
             height: 75
+            enabled: vueObjetMoteur.etatCasesQML
         }
     }
 
     Rectangle {
         id: case4
-        x: 62
+        x: 263
         y: 263
         width: 75
         height: 75
-        color: "#ffffff"
+        color: vueObjetMoteur.couleursQML[4]
         border.width: 3
+        border.color: vueObjetMoteur.bordsQML[4]
 
         MouseArea {
             id: mouseArea4
@@ -159,17 +184,19 @@ Rectangle {
             y: 0
             width: 75
             height: 75
+            enabled: vueObjetMoteur.etatCasesQML
         }
     }
 
     Rectangle {
         id: case5
-        x: 263
+        x: 461
         y: 263
         width: 75
         height: 75
-        color: "#ffffff"
+        color: vueObjetMoteur.couleursQML[5]
         border.width: 3
+        border.color: vueObjetMoteur.bordsQML[5]
 
         MouseArea {
             id: mouseArea5
@@ -177,17 +204,19 @@ Rectangle {
             y: 0
             width: 75
             height: 75
+            enabled: vueObjetMoteur.etatCasesQML
         }
     }
 
     Rectangle {
         id: case6
-        x: 461
-        y: 263
+        x: 62
+        y: 460
         width: 75
         height: 75
-        color: "#ffffff"
+        color: vueObjetMoteur.couleursQML[6]
         border.width: 3
+        border.color: vueObjetMoteur.bordsQML[6]
 
         MouseArea {
             id: mouseArea6
@@ -195,17 +224,19 @@ Rectangle {
             y: 0
             width: 75
             height: 75
+            enabled: vueObjetMoteur.etatCasesQML
         }
     }
 
     Rectangle {
         id: case7
-        x: 62
+        x: 264
         y: 460
         width: 75
         height: 75
-        color: "#ffffff"
+        color: vueObjetMoteur.couleursQML[7]
         border.width: 3
+        border.color: vueObjetMoteur.bordsQML[7]
 
         MouseArea {
             id: mouseArea7
@@ -213,17 +244,19 @@ Rectangle {
             y: 0
             width: 75
             height: 75
+            enabled: vueObjetMoteur.etatCasesQML
         }
     }
 
     Rectangle {
         id: case8
-        x: 264
+        x: 461
         y: 460
         width: 75
         height: 75
-        color: "#ffffff"
+        color: vueObjetMoteur.couleursQML[8]
         border.width: 3
+        border.color: vueObjetMoteur.bordsQML[8]
 
         MouseArea {
             id: mouseArea8
@@ -231,25 +264,7 @@ Rectangle {
             y: 0
             width: 75
             height: 75
-        }
-    }
-
-    Rectangle {
-        id: case9
-        x: 461
-        y: 460
-        width: 75
-        height: 75
-        color: "#ffffff"
-        radius: 0
-        border.width: 3
-
-        MouseArea {
-            id: mouseArea9
-            x: 0
-            y: 0
-            width: 75
-            height: 75
+            enabled: vueObjetMoteur.etatCasesQML
         }
     }
 
@@ -259,7 +274,7 @@ Rectangle {
         y: 579
         width: 474
         height: 52
-        text: qsTr("Joueur 1, à vous de jouer !")
+        text: vueObjetMoteur.infosQML
         font.bold: true
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
@@ -377,5 +392,3 @@ Rectangle {
         }
     }
 }
-
-
