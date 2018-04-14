@@ -1,18 +1,23 @@
 #include "case.h"
 
+// pour la description de la fonction de chaque méthode, voir case.h
+
 Case::Case(int i)
 {
-    numero = i;
+    numero = i; // numéro de la case
+
+    // on crée la liste déplacements selon le numéro de la case
     switch(i)
     {
     case 0:{
-        tailleDepl = 3;
+        tailleDepl = 3; // taille de la liste
+        // création et définition de la liste
         deplacements = new int[3];
         deplacements[0] = 1;
         deplacements[1] = 3;
         deplacements[2] = 4;
         break;
-    }
+    } // idem pour les autres cas
     case 1:{
         tailleDepl = 3;
         deplacements = new int[3];
@@ -86,9 +91,6 @@ Case::Case(int i)
 
 }
 
-int Case::getNumero(){
-    return numero;
-}
 
 int* Case::getDeplacements(){
     return deplacements;
@@ -98,10 +100,11 @@ int Case::getTailleDepl(){
     return tailleDepl;
 }
 
-bool Case::deplPossible(int i){
+bool Case::deplPossible(int j){
     bool res = false;
-    for (int j = 0; j<tailleDepl; j++){
-        if (deplacements[j] == i)
+    // test d'appartenance
+    for (int h = 0; h<tailleDepl; h++){
+        if (deplacements[h] == j)
                 res = true;
     }
     return res;

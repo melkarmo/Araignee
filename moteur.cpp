@@ -5,6 +5,7 @@ Moteur::Moteur(QObject *parent) : QObject(parent)
     for(int i = 0; i < 9; i++)
         cases[i] = new Case(i);
     initialisation();
+
     changeInfos();
     changeBords();
     changeCouleurs();
