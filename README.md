@@ -18,8 +18,6 @@ Le jeu se déroule en 2 temps :
   
   Pour désélectionner un de vos marqueurs, cliquez une nouvelle fois sur la case de votre marqueur sélectionné.
 
-Bon jeu !
-
 ## Captures d'écran
 
 ![Screenshots](https://image.ibb.co/c7aS97/captures_jeu.jpg)
