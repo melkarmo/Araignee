@@ -1,6 +1,8 @@
 # Jeu de l'araignée
 
-Bienvenue sur le jeu de l’Araignée !/nPour gagner, soyez le premier à aligner vos marqueurs horizontalement, verticalement ou en diagonale.
+Bienvenue sur le jeu de l’Araignée !
+
+Pour gagner, soyez le premier à aligner vos marqueurs horizontalement, verticalement ou en diagonale.
 
 ## Règles du jeu
 
