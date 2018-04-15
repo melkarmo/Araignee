@@ -51,7 +51,11 @@ public slots:
 
 private: // ---- Attributs ----
 
-    // Les différentes cases du jeu sont numérotées de 0 à 8, ce qui permet de faciliment y avoir accès et de bien se repérer
+    // Les différentes cases du jeu sont numérotées de 0 à 8, ce qui permet de facilement y avoir accès et de bien se repérer
+    // Schéma simplifié de la numérotation des 9 cases de la toile :
+    // 0 . 1 . 2
+    // 3 . 4 . 5
+    // 6 . 7 . 8
 
     bool tapisVide [9]; // tapisVide[i] vaut true si la case i est vide, false sinon (tapis fait référence au tapis de jeu)
 
