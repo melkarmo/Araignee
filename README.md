@@ -20,4 +20,4 @@ Le jeu se déroule en 2 temps :
 
 ## Captures d'écran
 
-![Screenshots](https://image.ibb.co/c7aS97/captures_jeu.jpg)
+![Screenshots](https://raw.githubusercontent.com/melkarmo/Araignee/master/screenshot.jpg)
